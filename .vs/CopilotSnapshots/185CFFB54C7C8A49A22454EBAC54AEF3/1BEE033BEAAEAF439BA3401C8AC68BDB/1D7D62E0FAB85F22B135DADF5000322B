@@ -1,0 +1,19 @@
+﻿var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+
+// Configure EF Core DbContext using connection string from appsettings.json
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
+                       ?? "Server=your_remote_server_address;Database=ProniaMVCTaxDb;User Id=USERNAME;Password=PASSWORD;TrustServerCertificate=True;";
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
+var app = builder.Build();
+app.UseStaticFiles();
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.Run();
