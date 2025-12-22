@@ -502,3 +502,4 @@ C:\Users\mehin\OneDrive\Рабочий стол\ProniaMVCTax\ProniaMVCTax\obj\De
 C:\Users\mehin\OneDrive\Рабочий стол\ProniaMVCTax\ProniaMVCTax\obj\Debug\net8.0\ProniaMVCTax.pdb
 C:\Users\mehin\OneDrive\Рабочий стол\ProniaMVCTax\ProniaMVCTax\obj\Debug\net8.0\ProniaMVCTax.genruntimeconfig.cache
 C:\Users\mehin\OneDrive\Рабочий стол\ProniaMVCTax\ProniaMVCTax\obj\Debug\net8.0\ref\ProniaMVCTax.dll
+C:\Users\mehin\OneDrive\Рабочий стол\ProniaMVCTax\ProniaMVCTax\obj\Debug\net8.0\ProniaMVCTax.sourcelink.json
