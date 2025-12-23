@@ -42,6 +42,30 @@ public class DashboardController : Controller
     }
 
     [HttpGet]
+    public IActionResult Update(int id)
+    {
+        Service? service = _context.Services.Find(id);
+        if (service == null) return NotFound();
+        return View(service);
+    }
+
+    [HttpPost]
+    public IActionResult Update(Service service)
+    {
+        if (!ModelState.IsValid) return View(service);
+        Service? baseService = _context.Services.Find(service.Id);
+        if (baseService is null) return NotFound();
+
+        baseService.Title = service.Title;
+        baseService.ShortDescription = service.ShortDescription;
+        baseService.IconImgPath = service.IconImgPath;
+
+        _context.Services.Update(baseService);
+        _context.SaveChanges();
+        return RedirectToAction(nameof(Index));
+    }
+
+    [HttpGet]
     public IActionResult Delete(int id)
     {
         Service? service = _context.Services.Find(id);
@@ -51,5 +75,5 @@ public class DashboardController : Controller
         return RedirectToAction("Index");
     }
 
-   
+
 }

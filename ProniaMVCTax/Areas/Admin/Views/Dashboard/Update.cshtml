@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Update";
+}
+@model Service
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Update Service</h4>
+            <p class="card-description">
+
+            </p>
+            <form method="post" asp-controller="Dashboard" asp-action="Update" class="forms-sample">
+                <div class="form-group">
+                    <label for="exampleInputTitle1">Title</label>
+                    <input asp-for="Title" class="form-control" id="exampleInputTitle1" placeholder="Title">
+                    <span style="color:red" asp-validation-for="Title"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputShortDescription1">Short Description</label>
+                    <input asp-for="ShortDescription" class="form-control" id="exampleInputShortDescription1" placeholder="Short Description">
+                    <span style="color:red" asp-validation-for="ShortDescription"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputImgPath1">Img Path</label>
+                    <input asp-for="IconImgPath" class="form-control" id="exampleInputImgPath1" placeholder="Img Path">
+                    <span style="color:red" asp-validation-for="IconImgPath"></span>
+                </div>
+                <button type="submit" class="btn btn-warning me-2">Update</button>
+                <a asp-action="Index" class="btn btn-light">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
