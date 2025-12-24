@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+}
+
+
+@model Product
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Update Product</h4>
+            <p class="card-description">
+
+            </p>
+            <form method="post" asp-controller="Product" asp-action="Update" class="forms-sample">
+                <div class="form-group">
+                    <label for="exampleInputName1">Name</label>
+                    <input asp-for="Name" class="form-control" id="exampleInputName1" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputDescription1">Description</label>
+                    <input asp-for="Description" class="form-control" id="exampleInputShortDescription1" placeholder="Description">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputMainImagePath1">Main Image Path</label>
+                    <input asp-for="MainImagePath" class="form-control" id="exampleInputMainImagePath1" placeholder="Main Image Path">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputHoverImagePath1">Hover Image Path</label>
+                    <input asp-for="HoverImagePath" class="form-control" id="exampleInputHoverImagePath1" placeholder="Hover Image Path">
+                </div>
+                <div class="form-group">
+                    <label for="examplePrice1">Price</label>
+                    <input asp-for="Price" class="form-control" id="exampleInputPrice1" placeholder="Price">
+                </div>
+                <div class="form-group">
+                    <label for="exampleSKU1">SKU</label>
+                    <input asp-for="SKU" class="form-control" id="exampleInputSKU1" placeholder="SKU">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleCategoryId">Category</label>
+                    <select asp-for="CategoryId" class="form-control" id="exampleCategoryId">
+
+                        <option selected disabled>Category seç</option>
+                        @foreach (Category category in ViewBag.Categories)
+                        {
+                            <option value="@category.Id">@category.Name</option>
+                        }
+                    </select>
+                </div>
+
+                <div style="color:red" asp-validation-summary="All" class="alert-danger"></div>
+                <button type="submit" class="btn btn-warning me-2">Update</button>
+                <a asp-action="Index" class="btn btn-light">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+

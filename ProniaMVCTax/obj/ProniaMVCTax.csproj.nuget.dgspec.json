@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mehin\\OneDrive\\Рабочий стол\\ProniaMVCTax\\ProniaMVCTax\\ProniaMVCTax.csproj": {}
+    "C:\\Users\\User\\Desktop\\ProniaMVCTax\\ProniaMVCTax\\ProniaMVCTax.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mehin\\OneDrive\\Рабочий стол\\ProniaMVCTax\\ProniaMVCTax\\ProniaMVCTax.csproj": {
+    "C:\\Users\\User\\Desktop\\ProniaMVCTax\\ProniaMVCTax\\ProniaMVCTax.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mehin\\OneDrive\\Рабочий стол\\ProniaMVCTax\\ProniaMVCTax\\ProniaMVCTax.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\ProniaMVCTax\\ProniaMVCTax\\ProniaMVCTax.csproj",
         "projectName": "ProniaMVCTax",
-        "projectPath": "C:\\Users\\mehin\\OneDrive\\Рабочий стол\\ProniaMVCTax\\ProniaMVCTax\\ProniaMVCTax.csproj",
-        "packagesPath": "C:\\Users\\mehin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mehin\\OneDrive\\Рабочий стол\\ProniaMVCTax\\ProniaMVCTax\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\ProniaMVCTax\\ProniaMVCTax\\ProniaMVCTax.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\ProniaMVCTax\\ProniaMVCTax\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mehin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
