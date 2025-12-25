@@ -17,7 +17,6 @@ public class HomeController : Controller
     {
         List<Service> services = _context.Services.ToList();
         List<SliderItem> sliderItems = _context.SliderItems.ToList();
-        //ViewData["SliderItems"] = sliderItems;
 
         HomeVM homeVM = new HomeVM
         {

@@ -36,6 +36,9 @@
                                 SKU
                             </th>
                             <th>
+                                Star
+                            </th>
+                            <th>
                                 CategoryId
                             </th>
                             <th>
@@ -51,11 +54,11 @@
                                     @product.Id
                                 </td>
                                 <td class="py-1">
-                                    <img src="~/assets/images/website-images//@product.MainImagePath"
+                                    <img src="~/admin/assets/images/uploads/@product.MainImagePath"
                                          alt="Shipping Icon" />
                                 </td>
                                 <td class="py-1">
-                                    <img src="~/assets/images/website-images//@product.HoverImagePath"
+                                    <img src="~/admin/assets/images/uploads/@product.HoverImagePath"
                                          alt="Shipping Icon" />
                                 </td>
                                 <td>
@@ -65,7 +68,13 @@
                                     @product.Description
                                 </td>
                                 <td>
+                                    @product.Price
+                                </td>
+                                <td>
                                     @product.SKU
+                                </td>
+                                <td>
+                                    @product.Star
                                 </td>
                                 <td>
                                     @product.CategoryId

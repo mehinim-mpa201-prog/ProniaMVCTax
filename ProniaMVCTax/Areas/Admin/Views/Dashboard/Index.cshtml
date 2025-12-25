@@ -1,64 +1,7 @@
 ﻿
-@model List<Service>
 @{
     ViewData["Title"] = "Index";
 }
 
-<div class="col-lg-12 grid-margin stretch-card">
-    <div class="card">
-        <div class="card-body">
-            <h4 class="card-title">Services Table</h4>
-            <p class="card-description">
-                <a asp-action="Create" class="btn btn-primary btn-sm">Create service</a>
-            </p>
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>
-                                #
-                            </th>
-                            <th>
-                                Icon Image
-                            </th>
-                            <th>
-                                Title
-                            </th>
-                            <th>
-                                Short Description
-                            </th>
-                            <th>
-                                Actions
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach(Service service in Model)
-                        {
-                            <tr>
-                                <td>
-                                    @service.Id
-                                </td>
-                                <td class="py-1">
-                                    <img src="~/assets/images/website-images//@service.IconImgPath"
-                                         alt="Shipping Icon" />
-                                </td>
-                                <td>
-                                    @service.Title
-                                </td>
-                                <td>
-                                    @service.ShortDescription
-                                </td>
-                                <td>
-                                    <a asp-action="Update" asp-route-id="@service.Id" class="btn btn-warning btn-sm">Update</a>
-                                    <a asp-action="Delete" asp-route-id="@service.Id" class="btn btn-danger btn-sm">Delete</a>
-                                </td>
-                            </tr>
-                        }
+<h1>Index</h1>
 
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
