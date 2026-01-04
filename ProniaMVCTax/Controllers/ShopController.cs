@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ProniaMVCTax.Models;
+using ProniaMVCTax.ViewModels;
 
 namespace ProniaMVCTax.Controllers;
 
@@ -16,5 +18,25 @@ public class ShopController : Controller
     {
         List<Product> products = _context.Products.ToList();
         return View(products);
+    }
+
+    public IActionResult Detail(int id)
+    {
+        List<Service> services = _context.Services.ToList();
+
+        Product? product = _context.Products.Include(p => p.ProductImages)
+                                            .Include(p => p.Category)
+                                            .Include(p => p.Brand)
+                                            .Include(p => p.ProductTags)
+                                                .ThenInclude(pt=> pt.Tag)
+                                            .FirstOrDefault(p => p.Id == id);
+        if (product == null) return NotFound();
+
+        DetailVM detailVM = new DetailVM
+        {
+            Product = product,
+            Services = services
+        };
+        return View(detailVM);
     }
 }

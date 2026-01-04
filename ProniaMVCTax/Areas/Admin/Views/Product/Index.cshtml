@@ -39,7 +39,10 @@
                                 Star
                             </th>
                             <th>
-                                CategoryId
+                                Category Name
+                            </th>
+                            <th>
+                                Brand Name
                             </th>
                             <th>
                                 Actions
@@ -71,13 +74,16 @@
                                     @product.Price
                                 </td>
                                 <td>
-                                    @product.SKU
+                                    @(product.SKU??"-")
                                 </td>
                                 <td>
                                     @product.Star
                                 </td>
                                 <td>
-                                    @product.CategoryId
+                                    @(product.Category?.Name??"-")
+                                </td>
+                                <td>
+                                    @(product.Brand?.Name ?? "-")
                                 </td>
                                 <td>
                                     <a asp-action="Update" asp-route-id="@product.Id" class="btn btn-warning btn-sm">Update</a>

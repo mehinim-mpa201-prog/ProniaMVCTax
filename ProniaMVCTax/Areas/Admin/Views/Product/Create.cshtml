@@ -30,6 +30,10 @@
                     <input asp-for="HoverImage" class="form-control" id="exampleInputHoverImage1" placeholder="Hover Image">
                 </div>
                 <div class="form-group">
+                    <label for="exampleInputProductImagesPath1">Product Images</label>
+                    <input asp-for="Images" class="form-control" id="exampleInputProductImages1" placeholder="Product Images">
+                </div>
+                <div class="form-group">
                     <label for="examplePrice1">Price</label>
                     <input asp-for="Price" class="form-control" id="exampleInputPrice1" placeholder="Price">
                 </div>
@@ -50,6 +54,28 @@
                         @foreach (Category category in ViewBag.Categories)
                         {
                             <option value="@category.Id">@category.Name</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleBrandId">Brand</label>
+                    <select asp-for="BrandId" class="form-control" id="exampleBrandId">
+
+                        <option selected disabled>Brand seç</option>
+                        @foreach (Brand brand in ViewBag.Brands)
+                        {
+                            <option value="@brand.Id">@brand.Name</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Tags</label>
+                    <select asp-for="TagIds" class="form-control" multiple>
+                        @foreach (Tag tag in ViewBag.Tags)
+                        {
+                            <option value="@tag.Id">@tag.Name</option>
                         }
                     </select>
                 </div>

@@ -161,9 +161,6 @@ wwwroot\admin\assets\images\sprites\jsgrid-icons-dark.png
 wwwroot\admin\assets\images\sprites\jsgrid-icons.png
 wwwroot\admin\assets\images\sprites\red.png
 wwwroot\admin\assets\images\sprites\yellow.png
-wwwroot\admin\assets\images\uploads\4183793a-f935-4f50-a616-ae9f951e1960image3.png
-wwwroot\admin\assets\images\uploads\44174efd-af9e-472a-8c41-7023d642409cimage2.png
-wwwroot\admin\assets\images\uploads\a6fd08f9-1c49-4f8d-8175-05724ebdce4bimage2.png
 wwwroot\admin\assets\js\ace.js
 wwwroot\admin\assets\js\alerts.js
 wwwroot\admin\assets\js\avgrund.js
@@ -1072,3 +1069,12 @@ wwwroot\assets\scss\_slider.scss
 wwwroot\assets\scss\_testimonial.scss
 wwwroot\assets\scss\_variables.scss
 wwwroot\assets\scss\_wishlist.scss
+wwwroot\admin\assets\images\uploads\0723018c-afd6-4970-b45c-e2212bb868a8images (6).jpg
+wwwroot\admin\assets\images\uploads\420c1b23-eb63-442d-bc30-63b7019ffddeimages (4).jpg
+wwwroot\admin\assets\images\uploads\5ed697d5-72e2-4220-a11d-79ecf9e7da6eimages (5).jpg
+wwwroot\admin\assets\images\uploads\c40c1855-7990-4a4d-80f0-358e730f18e3images.jpg
+wwwroot\admin\assets\images\uploads\e04a751a-9399-4caa-b02b-9eac0054920dimages (3).jpg
+wwwroot\admin\assets\images\uploads\e69406d6-d2eb-4f05-887a-5c4c6e4a3cd8images (10).jpg
+wwwroot\admin\assets\images\uploads\2594a762-79d6-4070-b40e-ab7c61bcb8abimage2.png
+wwwroot\admin\assets\images\uploads\34b79455-9364-47ed-a4ef-e52efca2b250image3.png
+wwwroot\admin\assets\images\uploads\3a480257-b71a-4f6d-b58f-3204bcc5fc4fimage.png
