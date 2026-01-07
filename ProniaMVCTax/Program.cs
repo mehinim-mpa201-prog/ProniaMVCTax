@@ -15,7 +15,6 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
     options.Password.RequiredLength = 6;
     options.Password.RequireUppercase = true;
     options.Password.RequireNonAlphanumeric = true;
-    // !@#$%^&*()
 
     options.User.RequireUniqueEmail = true;
 
@@ -27,6 +26,8 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
 
 var app = builder.Build();
 app.UseStaticFiles();
+
+app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "areas",

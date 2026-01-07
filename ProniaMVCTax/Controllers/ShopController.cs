@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProniaMVCTax.Models;
 using ProniaMVCTax.ViewModels;
 
 namespace ProniaMVCTax.Controllers;
 
+[Authorize]
 public class ShopController : Controller
 {
     private readonly AppDbContext _context;

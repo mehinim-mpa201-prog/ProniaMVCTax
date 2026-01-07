@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.General;
 using ProniaMVCTax.Models;
+using System.Reflection;
 
 namespace ProniaMVCTax;
 
@@ -20,6 +21,13 @@ public class AppDbContext:IdentityDbContext<AppUser>
     public DbSet<Tag> Tags { get; set; }
     public DbSet<ProductTag> ProductTags { get; set; }
 
+
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        base.OnModelCreating(builder);
+    }
 }
 
 

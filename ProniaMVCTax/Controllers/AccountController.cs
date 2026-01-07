@@ -10,11 +10,15 @@ public class AccountController : Controller
 {
     private readonly UserManager<AppUser> _userManager;
     private readonly SignInManager<AppUser> _signInManager;
+    private readonly RoleManager<IdentityRole> _roleManager;
+    private readonly IConfiguration _configuration;
 
-    public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+    public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager, IConfiguration configuration)
     {
         _userManager = userManager;
         _signInManager = signInManager;
+        _roleManager = roleManager;
+        _configuration = configuration;
     }
 
     [HttpGet]
@@ -48,7 +52,12 @@ public class AccountController : Controller
                 return View(registerVM);
             }
         }
-        return RedirectToAction(nameof(Login));
+
+        result = await _userManager.AddToRoleAsync(appUser, "Member");
+
+        await _signInManager.SignInAsync(appUser, false);
+
+        return RedirectToAction(nameof(Index), "Home");
     }
 
     [HttpGet]
@@ -87,6 +96,53 @@ public class AccountController : Controller
     public async Task<IActionResult> Logout()
     {
         await _signInManager.SignOutAsync();
+        return RedirectToAction(nameof(Index), "Home");
+    }
+
+    public async Task<IActionResult> CreateAdminAndModerator()
+    {
+        var adminUserVM = _configuration.GetSection("AdminUser").Get<UserVM>();
+
+        if (adminUserVM is {})
+        {
+            AppUser admin = new AppUser
+            {
+                FirstName = adminUserVM.FirstName,
+                LastName = adminUserVM.LastName,
+                UserName = adminUserVM.UserName,
+                Email = adminUserVM.Email,
+
+            };
+            var result = await _userManager.CreateAsync(admin, adminUserVM.Password);
+            result = await _userManager.AddToRoleAsync(admin, "Admin");
+
+        }
+
+        var moderatorUserVM = _configuration.GetSection("ModeratorUser").Get<UserVM>();
+
+        if (moderatorUserVM is { })
+        {
+            AppUser moderator = new AppUser
+            {
+                FirstName = moderatorUserVM.FirstName,
+                LastName = moderatorUserVM.LastName,
+                UserName = moderatorUserVM.UserName,
+                Email = moderatorUserVM.Email,
+
+            };
+            var result = await _userManager.CreateAsync(moderator, moderatorUserVM.Password);
+            result = await _userManager.AddToRoleAsync(moderator, "Moderator");
+
+        }
+
+        return RedirectToAction(nameof(Index), "Home");
+    }
+
+    public async Task<IActionResult> CreateRoles()
+    {
+        await _roleManager.CreateAsync(new IdentityRole("Admin"));
+        await _roleManager.CreateAsync(new IdentityRole("Moderator"));
+        await _roleManager.CreateAsync(new IdentityRole("Member"));
         return RedirectToAction(nameof(Index), "Home");
     }
 }
