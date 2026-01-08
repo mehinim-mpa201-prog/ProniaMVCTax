@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProniaMVCTax")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1e1b94d1235ff944072a03e005fe13c6d96428b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4bc570055dbfeeea80cb132ae3dd2abe9db564a6")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProniaMVCTax")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProniaMVCTax")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
