@@ -157,8 +157,8 @@
                                 </div>
                             </li>
                             <li class="add-to-cart">
-                                <a class="btn btn-custom-size lg-size btn-pronia-primary"
-                                   href="cart.html">Add to cart</a>
+                                <a asp-controller="Basket" asp-action="AddToBasket" asp-route-productId="@Model.Product.Id" class="btn btn-custom-size lg-size btn-pronia-primary"
+                                   >Add to cart</a>
                             </li>
                             <li class="wishlist-btn-wrap">
                                 <a class="custom-circle-btn" href="wishlist.html">

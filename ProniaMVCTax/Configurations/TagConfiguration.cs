@@ -16,5 +16,6 @@ public class TagConfiguration : IEntityTypeConfiguration<Tag>
              .HasForeignKey(x => x.TagId)
              .HasPrincipalKey(x => x.Id)
              .OnDelete(DeleteBehavior.Cascade);
+
     }
 }

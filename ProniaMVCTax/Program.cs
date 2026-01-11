@@ -13,6 +13,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 
 builder.Services.AddScoped<IEmailService,EmailService>();
+builder.Services.AddScoped<IBasketService,BasketService>();
 
 builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
 {

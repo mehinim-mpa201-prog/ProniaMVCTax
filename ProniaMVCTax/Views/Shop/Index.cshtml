@@ -268,7 +268,7 @@
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="cart.html"
+                                                            <a asp-controller="Basket" asp-action="AddToBasket" asp-route-productId=" @product.Id"
                                                                data-tippy="Add to cart"
                                                                data-tippy-inertia="true"
                                                                data-tippy-animation="shift-away"
@@ -369,7 +369,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="cart.html"
+                                                        <a 
                                                            data-tippy="Add to cart"
                                                            data-tippy-inertia="true"
                                                            data-tippy-animation="shift-away"

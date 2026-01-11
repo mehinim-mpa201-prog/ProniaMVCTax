@@ -18,7 +18,8 @@ public class ProductCreateVM
     [Required]
     public IFormFile HoverImage { get; set; }
 
-    public string? SKU { get; set; }
+    [Required]
+    public string SKU { get; set; }
 
     public int CategoryId { get; set; }
 

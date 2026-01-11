@@ -1,5 +1,4 @@
-﻿
-using MimeKit;
+﻿using MimeKit;
 using ProniaMVCTax.Abstractions;
 using ProniaMVCTax.ViewModels;
 using System.Net.Mail;
